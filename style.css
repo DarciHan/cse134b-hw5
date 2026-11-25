@@ -193,3 +193,21 @@ form textarea:user-valid {
 #form-info[hidden] {
     display: none;
 }
+
+/* Homework 5 - Part 3 */
+
+cat-facts {
+    --cat-background: #e8dff5;
+    --cat-text: #594466;
+
+    display: block;
+    background-color: var(--cat-background, white);
+    color: var(--cat-text, black);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+[data-theme="dark"] cat-facts {
+    --cat-background: #40334d;
+    --cat-text: #eee0f5;
+}

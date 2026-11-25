@@ -1,0 +1,60 @@
+---
+permalink: education.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Education</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="stories.html">Stories</a>
+            <a href="interests.html">Interests</a>
+        </nav>
+
+        <button type="button" id="theme-toggle" hidden>
+    Switch to Dark Mode
+</button
+    </header>
+
+<main>
+    <h1>My Education</h1>
+
+    <section>
+        <h2>Education Timeline</h2>
+        <ol>
+            <li>High School</li>
+            <li>Pasadena City College</li>
+            <li>UC San Diego</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>My Experience</h2>
+    <p>I am a <strong>Computer Science</strong> student.</p>
+    <p>Studying abroad has been an <em>important</em> experience.</p>
+    <p><b>Current School:</b> UC San Diego</p>
+    <p><i>Senior</i></p>
+
+    <h3>Current Courses</h3>
+    <ul>
+        <li>CSE103</li>
+        <li>CSE134</li>
+        <li>CSE140</li>
+    </ul>
+
+    <h3>Degree Progress</h3>
+    <label for="degree-progress">Degree completion:</label>
+    <progress id="degree-progress" value="70" max="100">70%</progress>
+    </section>
+</main>
+{% include "footer.njk" %}
+</body>
+</html>

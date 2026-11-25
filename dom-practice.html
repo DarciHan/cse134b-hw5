@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Practice</title>
+</head>
+
+<script>
+    async function loadMessage() {
+        try {
+            const response = await fetch("./sample.json");
+
+            if (!response.ok) {
+                throw new Error("Request failed");
+            }
+
+            const data = await response.json();
+
+            if (typeof data?.message !== "string") {
+                throw new Error("Invalid response");
+            }
+
+            console.log(data.message);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    loadMessage();
+</script>
+
+<body>
+
+    <button type="button" id="show-message">Show message</button>
+    <div id="messages"></div>
+
+    <script>
+        const button = document.querySelector("#show-message");
+        const messages = document.querySelector("#messages");
+
+        button.addEventListener("click", () => {
+            const message = document.createElement("p");
+            message.textContent = "You activated the button.";
+            messages.appendChild(message);
+        });
+    </script>
+
+</body>
+</html>
