@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Experiments</title>
+   
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="stories.html">Stories</a>
+            <a href="interests.html">Interests</a>
+        </nav>
+    </header>
+
+    <main>
+        <noscript>
+    <p>JavaScript is disabled. The canvas and console experiments may not work.</p>
+        </noscript>
+        <h1>HTML Experiments</h1>
+
+        <section>
+            <h2>Audio Experiment</h2>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </section>
+
+        <section>
+            <h2>Video Experiment</h2>
+            <video controls width="320">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </section>
+
+        <section>
+    <h2>Canvas Experiment</h2>
+
+    <canvas id="myCanvas" width="200" height="100">
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "pink";
+        ctx.fillRect(20, 20, 100, 50);
+    </script>
+</section>
+
+        <section>
+            <h2>Template Experiment</h2>
+            <template id="story-template">
+                <article>
+                    <h3>Story Title</h3>
+                    <p>Story content.</p>
+                </article>
+            </template>
+            <p>The template is stored in the HTML but not displayed.</p>
+        </section>
+
+        <section>
+    <h2>SVG Experiment</h2>
+    <p>Circle drawn using SVG.</p>
+
+    <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="75" cy="75" r="50" fill="pink" stroke="black" stroke-width="2"/>
+    </svg>
+</section>
+    <section>
+    <h2>Custom Element #1</h2>
+    <study-note>
+        <p>This is a note about my HTML experiments.</p>
+    </study-note>
+</section>
+
+
+<section>
+    <h2>Custom Element #2</h2>
+    <hello-message></hello-message>
+</section>
+
+<section>
+    <h2>MathML Extra Credit</h2>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>E</mi>
+        <mo>=</mo>
+        <mi>m</mi>
+        <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+        </msup>
+    </math>
+
+    <p>
+        MathML was not widely used because browser support
+        was inconsistent for many years. Developers could not
+        rely on mathematical equations displaying correctly
+        across different browsers. More recent browser support
+        has made MathML more practical to use.
+    </p>
+</section>
+    </main>
+
+    
+
+    <footer>
+        <a href="contact.html">Contact Me</a>
+    </footer>
+    <script>
+    class HelloMessage extends HTMLElement {
+        connectedCallback() {
+            console.log("Hello World!");
+        }
+    }
+    customElements.define("hello-message", HelloMessage);
+</script>
+</body>
+</html>
